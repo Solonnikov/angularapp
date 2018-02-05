@@ -1,0 +1,11 @@
+<div class="container p-4">
+  <!-- new event emitter -->
+  <app-post-form (newPost)="onNewPost($event)"></app-post-form>
+  <h2>Posts</h2>
+  <div *ngFor="let post of posts" class="card mb-2">
+    <div class="card-body">
+      <h3>{{post.title}}</h3>
+      <p>{{post.body}}</p>
+    </div>
+  </div>
+</div>
